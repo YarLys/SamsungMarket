@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/TV"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:text="Market"
+        android:textSize="40dp"></TextView>
+
+    <CheckBox
+        android:id="@+id/CB1"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="Фрукты"></CheckBox>
+
+    <CheckBox
+        android:id="@+id/CB2"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="Овощи"></CheckBox>
+
+    <CheckBox
+        android:id="@+id/CB3"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="Хлеб"></CheckBox>
+
+    <CheckBox
+        android:id="@+id/CB4"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="Вода"></CheckBox>
+
+    <CheckBox
+        android:id="@+id/CB5"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="Выпечка"></CheckBox>
+
+    <RadioGroup
+        android:id="@+id/RG"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/RB1"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:text="Молоко"></RadioButton>
+
+        <RadioButton
+            android:id="@+id/RB2"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:text="Кефир"></RadioButton>
+
+        <RadioButton
+            android:id="@+id/RB3"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:text="Ряженка"></RadioButton>
+    </RadioGroup>
+
+    <EditText
+        android:id="@+id/ET"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="Комментарий"></EditText>
+
+    <Button
+        android:id="@+id/B1"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="Отправить"></Button>
+
+    <Button
+        android:id="@+id/B2"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:text="Очистить"></Button>
+
+    <ImageView
+        android:id="@+id/IV1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        ></ImageView>
+</LinearLayout>
