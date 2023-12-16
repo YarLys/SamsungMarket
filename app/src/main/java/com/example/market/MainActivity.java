@@ -2,6 +2,8 @@ package com.example.market;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -52,6 +54,22 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Toast.makeText(getApplicationContext(), "Отправлено!", Toast.LENGTH_SHORT).show();
+
+                Intent intent = new Intent(Intent.ACTION_SENDTO); // далее выбор приложения почты, затем текст подставится в письмо
+                intent.setData(Uri.parse("mailto:"));
+                intent.putExtra(Intent.EXTRA_SUBJECT, "Список продуктов домой");
+                String mail = String.valueOf(binding.ET2.getText());
+                intent.putExtra(Intent.EXTRA_EMAIL, new String[] {mail});
+                intent.putExtra(Intent.EXTRA_TEXT, "Мои покупки\n"+binding.ET.getText());
+                startActivity(intent);
+            }
+        });
+        binding.TEL.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Intent.ACTION_DIAL);
+                intent.setData(Uri.parse("tel:"+binding.TEL.getText()));
+                startActivity(intent);
             }
         });
         binding.B2.setOnClickListener(new View.OnClickListener() {
